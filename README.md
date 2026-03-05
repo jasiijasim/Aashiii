@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For My aashii kuttyyyyyy🥰</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+      color: white;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .page {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 18px;
+      border-radius: 25px;
+      border: none;
+      background: white;
+      color: #ff4e8a;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff4e8a;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<div id="page1" class="page active">
+  <h1>aashiii mahhhh🤭</h1>
+  <p>This small website is only for you 💕</p>
+  <button onclick="nextPage(2)">Next ➡</button>
+</div>
+
+<div id="page2" class="page">
+  <h1>You Mean Everything To Me🥰</h1>
+  <p>Every day with you feels special fr😭</p>
+  <p>I’m really lucky to have you in my life🫂</p>
+  <button onclick="nextPage(3)">Next ➡</button>
+</div>
+
+<div id="page3" class="page">
+  <h1>Forever With You 💍</h1>
+  <p>No matter what happens, I’ll always care about you 🥰</p>
+  <h2>I love You So Much ❤️</h2>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page' + pageNumber).classList.add('active');
+}
+</script>
+
+</body>
+</html>
