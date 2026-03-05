@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>For My Love ❤️</title>
+  <title>For My Princess ❤️</title>
   <style>
     body {
-      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
-      text-align: center;
+      margin: 0;
       font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #ff758c, #ff7eb3);
       color: white;
-      padding-top: 100px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    h1 {
-      font-size: 40px;
+    .page {
+      display: none;
+      padding: 20px;
     }
 
-    p {
-      font-size: 20px;
+    .active {
+      display: block;
     }
 
     button {
-      padding: 12px 25px;
+      padding: 10px 25px;
       font-size: 18px;
-      border: none;
       border-radius: 25px;
-      background-color: white;
-      color: hotpink;
-      cursor: pointer;
+      border: none;
+      background: white;
+      color: #ff4e8a;
       margin-top: 20px;
+      cursor: pointer;
     }
 
     button:hover {
-      background-color: hotpink;
+      background: #ff4e8a;
       color: white;
     }
   </style>
 </head>
 <body>
 
-  <h1>Hi My Princess 👑</h1>
-  <p>You are the best thing that ever happened to me 💖</p>
-  <p>I am so lucky to have you in my life ✨</p>
+<div id="page1" class="page active">
+  <h1>Hi My Love 👑</h1>
+  <p>This small website is only for you 💕</p>
+  <button onclick="nextPage(2)">Next ➡</button>
+</div>
 
-  <button onclick="showMessage()">Click Here ❤️</button>
+<div id="page2" class="page">
+  <h1>You Mean Everything To Me ❤️</h1>
+  <p>Every day with you feels special ✨</p>
+  <p>I’m really lucky to have you in my life 💖</p>
+  <button onclick="nextPage(3)">Next ➡</button>
+</div>
 
-  <script>
-    function showMessage() {
-      alert("I Love You So Much 💍 Forever and Always!");
-    }
-  </script>
+<div id="page3" class="page">
+  <h1>Forever With You 💍</h1>
+  <p>No matter what happens, I’ll always care about you 🥰</p>
+  <h2>I Like You So Much ❤️</h2>
+</div>
+
+<script>
+function nextPage(pageNumber) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page' + pageNumber).classList.add('active');
+}
+</script>
 
 </body>
 </html>
